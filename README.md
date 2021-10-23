@@ -53,3 +53,7 @@
 ### 10.23~ 10.30
 
 裸机运行zCore user shell
+
+#### PCI 驱动
+
+- https://blog.csdn.net/star871016/article/details/112990144
