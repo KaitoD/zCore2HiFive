@@ -38,3 +38,15 @@
 #### 3.zCore
 
 - [zCore Tutorial](https://rcore-os.github.io/zCore-Tutorial/)
+
+#### 4.Freedom U SDK
+
+- https://github.com/sifive/freedom-u-sdk/
+
+#### 5.Trouble
+
+- Careful about page table entry（A and D） set as 1
+- No FS (need driver to use SD card)
+- 1+4 cores (mhartid=0 will NOT boot)
+- Misaligned load/store
+
