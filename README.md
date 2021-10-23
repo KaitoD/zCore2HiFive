@@ -50,3 +50,6 @@
 - 1+4 cores (mhartid=0 will NOT boot)
 - Misaligned load/store
 
+### 10.23~ 10.30
+
+裸机运行zCore user shell
