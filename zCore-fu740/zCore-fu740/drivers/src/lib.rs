@@ -24,6 +24,7 @@ pub mod prelude;
 pub mod scheme;
 pub mod uart;
 pub mod utils;
+pub mod pci;
 
 #[derive(Debug)]
 pub enum DeviceError {
@@ -55,6 +56,7 @@ pub enum Device {
     Irq(Arc<dyn scheme::IrqScheme>),
     Net(Arc<dyn scheme::NetScheme>),
     Uart(Arc<dyn scheme::UartScheme>),
+    Pci(Arc<dyn scheme::PciScheme>),
 }
 
 impl Device {
@@ -66,6 +68,7 @@ impl Device {
             Self::Irq(d) => d.clone().upcast(),
             Self::Net(d) => d.clone().upcast(),
             Self::Uart(d) => d.clone().upcast(),
+            Self::Pci(d) => d.clone().upcast(),
         }
     }
 }
@@ -79,6 +82,7 @@ impl fmt::Debug for Device {
             Self::Irq(d) => write!(f, "IrqDevice({:?})", d.name()),
             Self::Net(d) => write!(f, "NetDevice({:?})", d.name()),
             Self::Uart(d) => write!(f, "UartDevice({:?})", d.name()),
+            Self::Pci(d) => write!(f, "PciDevice({:?})", d.name()),
         }
     }
 }
